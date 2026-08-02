@@ -1,0 +1,46 @@
+import java.util.ArrayList;
+import java.util.List;
+
+// The public class name must exactly match the file name (Main.java)
+public class Main {
+
+    // 1. Attributes (Instance Variables)
+    private String developerName;
+    private int experienceYears;
+
+    // 2. Constructor to initialize objects
+    public Main(String name, int years) {
+        this.developerName = name;
+        this.experienceYears = years;
+    }
+
+    // 3. A standard method that returns a value
+    public String getDeveloperDetails() {
+        return "Developer: " + developerName + " (" + experienceYears + " years exp)";
+    }
+
+    // 4. The main method: Execution entry point for all Java programs
+    public static void main(String[] args) {
+        
+        // Instantiate objects using the 'new' keyword
+        Main dev1 = new Main("Alice", 5);
+        Main dev2 = new Main("Bob", 2);
+
+        // Create a List to store the objects
+        List<Main> team = new ArrayList<>();
+        team.add(dev1);
+        team.add(dev2);
+
+        // Print header to the console
+        System.out.println("--- Team Roster ---");
+
+        // Enhanced for-loop (for-each) to iterate through the list
+        for (Main developer : team) {
+            System.out.println(developer.getDeveloperDetails());
+        }
+
+        // Simple for-loop demonstration
+        System.out.println("\n--- Counting Tasks ---");
+        for (int i = 1; i <= 3; i++) {
+            System.out.println("Task #" + i + " completed.");
+        }
